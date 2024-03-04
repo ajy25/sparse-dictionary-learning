@@ -1,7 +1,8 @@
 import numpy as np
-from sklearn.linear_model import orthogonal_mp_gram, orthogonal_mp
 from sklearn.cluster import KMeans
 from sklearn.decomposition import PCA
+import numpy as np
+from sklearn.linear_model import orthogonal_mp_gram, orthogonal_mp
 import warnings
 
 def prune_dictionary(D: np.ndarray, threshold: float = 0.8, 
@@ -178,7 +179,7 @@ def ksvd(X: np.ndarray, D_0: np.ndarray, K: int = None, max_iter: int = 10,
               "Please consider reselecting hyperparameters.")
     return D, Gamma
 
-class KSVD_Learner():
+class KSVDDictionaryLearner():
     """
     K-SVD algorithm for learning sparse signal representations.
     """
